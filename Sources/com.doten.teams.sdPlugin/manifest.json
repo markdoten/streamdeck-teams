@@ -31,6 +31,18 @@
       ],
       "Tooltip": "Toggle camera on current device",
       "UUID": "com.doten.teams.camera"
+    },
+    {
+      "Icon": "images/share",
+      "Name": "Sharing Toolbar",
+      "States": [
+        {
+          "Image": "images/share",
+          "Name": "share"
+        }
+      ],
+      "Tooltip": "Open sharing toolbar on current device",
+      "UUID": "com.doten.teams.share"
     }
   ],
   "SDKVersion": 2,

@@ -26,10 +26,20 @@ public class Plugin: NSObject, ESDEventsProtocol {
     }
     
     public func keyDown(forAction action: String, withContext context: Any, withPayload payload: [AnyHashable : Any], forDevice deviceID: String) {
-        var keystroke = #"keystroke "o" using {shift down, command down}"#
+        var keystroke = ""
         
-        if (action == "com.doten.teams.mute") {
+        switch (action) {
+        case "com.doten.teams.camera":
+            keystroke = #"keystroke "o" using {shift down, command down}"#
+            break;
+        case "com.doten.teams.mute":
             keystroke = #"keystroke "m" using {shift down, command down}"#
+            break;
+        case "com.doten.teams.share":
+            keystroke = #"keystroke "e" using {shift down, command down}"#
+            break;
+        default:
+            break;
         }
 
         executeAppleScript(source: """
