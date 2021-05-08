@@ -1,0 +1,60 @@
+{
+  "Actions": [
+    {
+      "Icon": "images/mic",
+      "Name": "Toggle Mute",
+      "States": [
+        {
+          "Image": "images/mic_on",
+          "Name": "On"
+        },
+        {
+          "Image": "images/mic_off",
+          "Name": "Off"
+        }
+      ],
+      "Tooltip": "Toggle microphone mute on current device",
+      "UUID": "com.doten.teams.mute"
+    },
+    {
+      "Icon": "images/camera",
+      "Name": "Toggle Camera",
+      "States": [
+        {
+          "Image": "images/camera_on",
+          "Name": "On"
+        },
+        {
+          "Image": "images/camera_off",
+          "Name": "Off"
+        }
+      ],
+      "Tooltip": "Toggle camera on current device",
+      "UUID": "com.doten.teams.camera"
+    }
+  ],
+  "SDKVersion": 2,
+  "Author": "Mark Doten",
+  "CodePath": "Plugin",
+  "Description": "Teams integration",
+  "Name": "Teams",
+  "Icon": "images/teams_logo",
+  "URL": "https://www.elgato.com/gaming/stream-deck",
+  "Category": "Teams",
+  "CategoryIcon": "images/category_teams",
+  "Version": "1.0.1",
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion" : "10.11"
+    }
+  ],
+  "ApplicationsToMonitor": {
+  	"mac": [
+		  "Teams"
+	  ]
+  },
+  "Software": {
+    "MinimumVersion" : "4.8"
+  }
+}
