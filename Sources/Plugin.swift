@@ -26,6 +26,7 @@ public class Plugin: NSObject, ESDEventsProtocol {
     }
     
     public func keyDown(forAction action: String, withContext context: Any, withPayload payload: [AnyHashable : Any], forDevice deviceID: String) {
+        let appName = "Microsoft Teams"
         var keystroke = ""
         
         switch (action) {
@@ -41,20 +42,24 @@ public class Plugin: NSObject, ESDEventsProtocol {
         default:
             break;
         }
-
+        
         executeAppleScript(source: """
-            set crntAppPath to (path to frontmost application as text)
+            set appName to "\(appName)"
 
-            tell application "Microsoft Teams"
-              activate
-              tell application "System Events"
-                \(keystroke)
-              end tell
-            end tell
+            if application appName is running
+                set crntAppPath to (path to frontmost application as text)
 
-            tell application crntAppPath
-              activate
-            end tell
+                tell application id (id of application appName)
+                  activate
+                  tell application "System Events"
+                    \(keystroke)
+                  end tell
+                end tell
+
+                tell application crntAppPath
+                  activate
+                end tell
+            end if
         """)
     }
     
