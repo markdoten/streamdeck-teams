@@ -39,6 +39,8 @@ public class Plugin: NSObject, ESDEventsProtocol {
         case "com.doten.teams.share":
             keystroke = #"keystroke "e" using {shift down, command down}"#
             break;
+        case "com.doten.teams.end":
+            keystroke = #"keystroke "b" using {shift down, command down}"#
         default:
             break;
         }

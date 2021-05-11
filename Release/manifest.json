@@ -13,7 +13,7 @@
           "Name": "Off"
         }
       ],
-      "Tooltip": "Toggle microphone mute on current device",
+      "Tooltip": "Toggle microphone mute",
       "UUID": "com.doten.teams.mute"
     },
     {
@@ -29,7 +29,7 @@
           "Name": "Off"
         }
       ],
-      "Tooltip": "Toggle camera on current device",
+      "Tooltip": "Toggle camera",
       "UUID": "com.doten.teams.camera"
     },
     {
@@ -41,8 +41,20 @@
           "Name": "share"
         }
       ],
-      "Tooltip": "Open sharing toolbar on current device",
+      "Tooltip": "Open sharing toolbar",
       "UUID": "com.doten.teams.share"
+    },
+    {
+      "Icon": "images/end",
+      "Name": "Leave Call",
+      "States": [
+        {
+          "Image": "images/end",
+          "Name": "end"
+        }
+      ],
+      "Tooltip": "Leave the current call",
+      "UUID": "com.doten.teams.end"
     }
   ],
   "SDKVersion": 2,
