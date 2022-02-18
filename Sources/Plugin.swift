@@ -40,12 +40,20 @@ public class Plugin: NSObject, ESDEventsProtocol {
             keystroke = #"keystroke "e" using {shift down, command down}"#
             break;
         case "com.doten.teams.end":
-            keystroke = #"keystroke "b" using {shift down, command down}"#
+            keystroke = #"keystroke "h" using {shift down, command down}"#
+            break;
+        case "com.doten.teams.decline":
+            keystroke = #"keystroke "d" using {shift down, command down}"#
+            break;
+        case "com.doten.teams.raisehand":
+            keystroke = #"keystroke "k" using {shift down, command down}"#
+            break;
         default:
+            NSLog("unkown action: \(action)");
             break;
         }
         
-        executeAppleScript(source: """
+        let script = """
             set appName to "\(appName)"
 
             if application appName is running
@@ -62,7 +70,9 @@ public class Plugin: NSObject, ESDEventsProtocol {
                   activate
                 end tell
             end if
-        """)
+        """
+        //        NSLog("Script: \(script)")
+        executeAppleScript(source: script)
     }
     
     public func keyUp(forAction action: String, withContext context: Any, withPayload payload: [AnyHashable : Any], forDevice deviceID: String) {

@@ -55,7 +55,35 @@
       ],
       "Tooltip": "Leave the current call",
       "UUID": "com.doten.teams.end"
-    }
+    },
+    {
+      "Icon": "images/decline",
+      "Name": "Decline Call",
+      "States": [
+        {
+          "Image": "images/decline",
+          "Name": "decline"
+        }
+      ],
+      "Tooltip": "Decline incoming call",
+      "UUID": "com.doten.teams.decline"
+    },
+    {
+        "Icon": "images/hand",
+        "Name": "Toggle Raise Hand",
+        "States": [
+          {
+            "Image": "images/hand_raised",
+            "Name": "Raised"
+          },
+          {
+            "Image": "images/hand",
+            "Name": "Not raised"
+          }
+        ],
+        "Tooltip": "Toggle Raise Hand",
+        "UUID": "com.doten.teams.raisehand"
+      }
   ],
   "SDKVersion": 2,
   "Author": "Mark Doten",
