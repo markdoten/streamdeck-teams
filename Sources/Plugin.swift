@@ -42,6 +42,9 @@ public class Plugin: NSObject, ESDEventsProtocol {
         case "com.doten.teams.end":
             keystroke = #"keystroke "h" using {shift down, command down}"#
             break;
+        case "com.doten.teams.accept":
+            keystroke = #"keystroke "s" using {shift down, command down}"#
+            break;
         case "com.doten.teams.decline":
             keystroke = #"keystroke "d" using {shift down, command down}"#
             break;

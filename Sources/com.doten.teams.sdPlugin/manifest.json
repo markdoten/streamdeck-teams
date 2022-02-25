@@ -69,6 +69,18 @@
       "UUID": "com.doten.teams.decline"
     },
     {
+      "Icon": "images/accept",
+      "Name": "Accept Call",
+      "States": [
+        {
+          "Image": "images/accept",
+          "Name": "accept"
+        }
+      ],
+      "Tooltip": "Accept incoming call",
+      "UUID": "com.doten.teams.accept"
+    },
+    {
         "Icon": "images/hand",
         "Name": "Toggle Raise Hand",
         "States": [
